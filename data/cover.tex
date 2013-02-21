@@ -1,0 +1,65 @@
+
+%%% Local Variables:
+%%% mode: latex
+%%% TeX-master: t
+%%% End:
+\secretlevel{绝密} \secretyear{2100}
+\ctitlehead{学\;\;\;\;位\;\;\;\;论\;\;\;\;文} %出发需要, 否则不要更改 ctitlehead
+% 再这里往下开始更改
+\ctitle{中文题目第一行\\中文题目第二行}
+\datesubmit{2012-04-24} %提交时间
+\datedefend{2012-\;\;-\;\;} %答辩时间
+%\emajor{Computer Systems Organization}
+% 根据自己的情况选，不用这样复杂
+\makeatletter
+\ifthu@bachelor\relax\else
+  \ifthu@doctor
+    \cdegree{工学博士}
+  \else
+    \ifthu@master
+      \cdegree{工学硕士}
+    \fi
+  \fi
+\fi
+\makeatother
+
+
+\cdepartment[信息学院]{信息科学与工程学院}
+\cmajor{中文专业名称}
+\cauthor{李四} 
+\date{2012-04}
+\csupervisor{张三\;教授}
+% 如果没有副指导老师或者联合指导老师，把下面两行相应的删除即可。
+%\cassosupervisor{陈文光教授}
+%\ccosupervisor{某某某教授}
+% 日期自动生成，如果你要自己写就改这个cdate
+%\cdate{\CJKdigits{\the\year}年\CJKnumber{\the\month}月}
+
+% 博士后部分
+% \cfirstdiscipline{计算机科学与技术}
+% \cseconddiscipline{系统结构}
+% \postdoctordate{2009年7月——2011年7月}
+
+\etitle{English Title} 
+% \edegree{Doctor of Science} 
+\edegree{Doctor of Engineering} 
+\emajor{Major} 
+\eauthor{Si LI} 
+\esupervisor{Professor San Zhang } 
+%\eassosupervisor{Chen Wenguang} 
+% 这个日期也会自动生成，你要改么？
+% \edate{December, 2005}
+
+% 定义中英文摘要和关键字
+\begin{cabstract}
+中文摘要
+\end{cabstract}
+
+\ckeywords{关键字,关键字}
+
+\begin{eabstract} 
+\indent
+English abstract Here.
+\end{eabstract}
+
+\ekeywords{keywords, keywords}
