@@ -131,11 +131,11 @@
                  {\ClassWarning{thuthesis}{no arial.sty availiable!}}
   \fi
 \fi
-\ifthu@dvips\else
-  \ifthu@xetex\else
-    \RequirePackage{ccmap}
-  \fi
-\fi
+%\ifthu@dvips\else
+  %\ifthu@xetex\else
+    %\RequirePackage{ccmap}
+  %\fi
+%\fi
 \RequirePackage[amsmath,thmmarks,hyperref]{ntheorem}
 \RequirePackage{array}
 \RequirePackage{longtable}
@@ -241,9 +241,7 @@
 \else %TODO here is the paper layout
   \addtolength{\textwidth}{0cm}
   \setlength{\pdfpageheight}{29.7cm}
-  \setlength{\pdfpagewidth}{21cm}
-  %\setlength{\hoffset}{-1in}
-  %\setlength{\voffset}{-1in}
+  \setlength{\pdfpagewidth}{21cm}  
   \setlength{\topmargin}{1.9cm-1in}
   \setlength{\oddsidemargin}{2.7cm-1in}
   \setlength{\textheight}{24.7cm}
@@ -270,6 +268,7 @@
   \let\@evenhead\@empty%
   \def\@oddfoot{\hfil\wuhao --\;\thepage\; -- \hfil}%
   \let\@evenfoot=\@oddfoot}
+
 \def\ps@thu@headings{%
   \def\@oddhead{\vbox to\headheight{%
     \hb@xt@\textwidth{\wuhao\kai东北大学博士学位论文\hfill\hfill\hfill\leftmark\ifthu@bachelor\relax\else\fi}%
@@ -281,6 +280,7 @@
       \vskip2pt\hbox{\vrule width\textwidth height0.4pt depth0pt}}}
   \def\@oddfoot{\hfil\wuhao --\;\thepage\;-- \hfil}
   \let\@evenfoot=\@oddfoot}
+	
 \renewcommand{\chaptermark}[1]{\@mkboth{\@chapapp\  ~~#1}{}}
 \newlength\CJK@twochars
 \ifxetex
@@ -822,7 +822,7 @@
         \hspace*{7.5cm}\thu@authorsig\hspace*{3.5cm}
                        \\ 
                        \\
-        \hspace*{7.9cm}\ziju{11pt}\thu@frontdate%
+        \hspace*{7.5cm}\ziju{11pt}\thu@frontdate%
                          
                        %\thu@underline[7em]
       \endgroup
@@ -831,17 +831,18 @@
   \ifthu@bachelor\vskip\baselineskip\else\vskip18pt\sihao[2]\fi\par
   \thu@authorization\par
   \vspace{18pt}
-  {\thu@authorizationaddon}\par
-  \ifthu@bachelor\vskip1.0cm\else\vskip0.8cm\fi
+  {\thu@authorizationaddon}\par \vskip0.5cm
+	{\thu@authorizationaddonSE}\par
+  \ifthu@bachelor\vskip1.0cm\else\vskip0.5cm\fi
   \ifthu@bachelor
     \ifthu@bachelor\indent\else\noindent\fi\thu@authorsig\thu@underline\relax%
     \thu@teachersig\thu@underline\relax\thu@frontdate\thu@underline\relax
   \else
     \begingroup
       \parindent0pt\sihao
-      \hspace*{1.5cm}\thu@authorsig\hspace*{3.5cm}
+      \hspace*{0cm}\thu@authorsig\hspace*{3.5cm}
                      \thu@teachersig\relax\hspace*{1cm}\\            
-      \hspace*{1.9cm}\ziju{11pt}\thu@frontdate\hspace*{3.65cm}%
+      \hspace*{0cm}\ziju{11pt}\thu@frontdate\hspace*{4.05cm}%
                      \ziju{0pt}\thu@frontdate\relax\hspace*{1cm}  
                      %\thu@underline[7em]
     \endgroup
